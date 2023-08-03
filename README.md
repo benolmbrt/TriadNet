@@ -29,8 +29,8 @@ Below we present the performance for a run:
 | ------------- | ------------- |
 | Target coverage  | 0.900 |
 | Empiric coverage  | 0.914  |
-| Average MAE  | 43964 |
-| Average Width  | 7786  |
+| Average With  | 43964 |
+| Average MAE  | 7786  |
 
 ![res](https://github.com/benolmbrt/TriadNet/blob/master/paper_figure.png)
 
