@@ -1,0 +1,12 @@
+--output-folder: /path/to/save/folder
+--overwrite:
+--batch-size: 4
+--num-workers: 10
+--gpus: 3
+--data-csv: /path/to/syn/data/train.csv
+--channel-name: image
+--segm-name: mask
+--n-classes: 2
+--image-key: image_id
+--early-stopping-patience: 5
+--learning-rate: 2e-4
