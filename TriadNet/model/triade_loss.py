@@ -2,7 +2,7 @@ import torch
 from monai.losses import TverskyLoss
 
 
-class TriadeLoss:
+class TriadLoss:
     """
     Segmentation loss to get predictive intervals by predicting mean mask, upper mask, lower mask
     """

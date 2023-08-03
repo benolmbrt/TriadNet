@@ -8,8 +8,8 @@ from monai.networks.utils import one_hot
 
 from torch.optim import Adam
 from TriadNet.dataloader.mri_datamodule import concatenate_channels
-from TriadNet.model.triade_net import TriadeNet
-from TriadNet.model.triade_loss import TriadeLoss
+from TriadNet.model.triade_net import TriadNet
+from TriadNet.model.triade_loss import TriadLoss
 
 """
 Define a simple Pytorch Lightning model to train the TriadeNet model
@@ -30,14 +30,14 @@ class PLModule(LightningModule):
     def define_network(self):
         print(f'Initializing 3D TriadeNet with n_classes = {self.hparams.n_classes}')
 
-        self.net = TriadeNet(dim=3,
+        self.net = TriadNet(dim=3,
                              in_channels=self.hparams.in_channels,
                              out_channels=self.hparams.n_classes,
                              )
 
 
     def define_losses(self):
-        self.loss = TriadeLoss(include_background=True)
+        self.loss = TriadLoss(include_background=True)
 
     def configure_optimizers(self):
         """

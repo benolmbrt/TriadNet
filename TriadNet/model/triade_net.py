@@ -6,12 +6,13 @@ from TriadNet.model.blocks import get_convolution_operator
 from TriadNet.model.blocks import DownBlockNd, UpBlockNd, BottomBlockNd
 from TriadNet.model.blocks import GridAttentionBlockND
 
+
 """
-3 output convs instead of 3 output decoder
+Definition of the TriadNet architecture with 3 output blocks for the mean, lower and upper masks.
 """
 
 
-class TriadeNet(nn.Module):
+class TriadNet(nn.Module):
     def __init__(self,
                  dim: int,
                  in_channels: int,
